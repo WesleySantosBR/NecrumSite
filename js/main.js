@@ -1013,7 +1013,7 @@ $(function () {
         $(this).addClass('active');
 
         $('#header-wrapper .popular-games .block-info .game-name').text($(this).data('name'));
-        $('#header-wrapper .popular-games .block-person img').attr('src', '/img/games/character/' + $(this).data('character'));
+        $('#header-wrapper .popular-games .block-person img').attr('src', '' + $(this).data('character'));
         $('#header-wrapper .popular-games .block-info .game-min-price span').text($(this).data('min-price') + 'R$');
         $('#header-wrapper .popular-games .block-info').attr('href', $(this).data('link'));
     });
