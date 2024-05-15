@@ -1,0 +1,234 @@
+/*
+File Name: 		custom.css
+Description:  You can add your custom CSS here and it will overwrite template styles
+*/
+
+/*# sourceMappingURL=maps/custom.css.map */
+.scroll-is--active .page-thumbnail--default .ncr-page-decor__layer-3 {
+    opacity: 0.7;
+}
+
+#visits-box {
+    position: fixed;
+    right: 0;
+    top: 150px;
+    z-index: 1101;
+    background: #002a60;
+    padding: 0 10px;
+    font-weight: 900;
+    border-radius: 10px 0px 0px 10px;
+    cursor: default;
+    color:#fff;
+}
+
+.row.adjust {
+    justify-content: space-between;
+}
+
+.row.adjust .col-md-4 {
+    width: 95px;
+    text-align: center;
+}
+
+.row.adjust .col-md-4 .counter{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.row.adjust .col-md-4 .counter svg{
+    min-height: 40px;
+}
+
+.zap-fixed {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1101;
+}
+
+.zap-fixed i {
+    font-size: 50px;
+    color: #007bff;
+}
+
+.page-thumbnail {
+    background: #212540d1;
+}
+
+.site-content__inner {
+    display: flex;
+    justify-content: center;
+}
+
+.whats-buy {
+    width: 400px;
+    height: 60px;
+    font-size: 32px;
+    background: #007bff;
+    animation: pulse 1s infinite alternate;
+    transition: 1s;
+    border-radius: 20px;
+}
+
+.whats-buy:hover {
+    background: #007bff;
+}
+
+#elojob {
+    margin: 0px 0px 50px;
+}
+
+.video-lado {
+    z-index: 0;
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0px 0px rgb(41, 90, 206);
+	}
+
+	100% {
+        box-shadow: 0 0px 40px -4px rgb(36, 112, 193)
+
+	}
+}
+
+@media (max-width: 768px) {
+    #visits-box {
+        top: unset !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        border-radius: 0 10px 0 0px !important;
+        width: 150px;
+    }
+
+
+    .is-hidden-mobile {
+        display: none;
+    }
+    
+    .landing-detail--left span, .landing-detail-cover--left span {
+        left: -130px !important;
+    }
+
+    .landing-detail--right span, .landing-detail-cover--right span {
+        right: -130px !important;
+    }   
+
+    .site-header--landing .main-nav:first-of-type {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .site-header--landing .main-nav:last-of-type {
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    .whats-buy {
+        width: 100%;
+    }
+
+    .fix-spacing {
+        margin-top: 40px;
+    }
+}
+
+
+/*=============[MODAL]=============*/
+.btn-custom.whats-buy {
+    display: block;
+    width: 70%; /* Define a largura do botão para ocupar 70% da largura do modal */
+    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+.btn-custom.whats-buy:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    box-shadow: 0 5px 15px rgba(33, 136, 56, 0.6);
+}
+.checkboxes-left {
+    text-align: left !important;
+}
+.modal-header h5 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*===============================================CHECKBOXES */
+    /* Esconde o checkbox original */
+    #checkboxes input[type="checkbox"] {
+        display: none;
+    }
+
+    /* Estiliza o label (que atuará como nosso switch) */
+    #checkboxes input[type="checkbox"] + label {
+        position: relative;
+        padding-left: 43px; /* ajuste de padding */
+        height: 30px;       /* ajuste de altura */
+        line-height: 20px; /* ajuste de linha */
+        display: inline-block;
+        cursor: pointer;
+        vertical-align: middle; /* alinhamento vertical */
+    }
+
+    /* Estiliza o background do switch */
+    #checkboxes input[type="checkbox"] + label::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%); /* centraliza verticalmente */
+        width: 40px;                /* ajuste de largura */
+        height: 20px;               /* ajuste de altura */
+        background-color: #717171;  /* vermelho para OFF */
+        border-radius: 10px;        /* ajuste de borda */
+        transition: all 0.3s;
+    }
+
+    /* Estiliza o botão deslizante do switch */
+    #checkboxes input[type="checkbox"] + label::after {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        transform: translateY(-50%); /* centraliza verticalmente */
+        width: 16px;                /* ajuste de largura */
+        height: 16px;               /* ajuste de altura */
+        background-color: #fff;
+        border-radius: 50%;
+        transition: all 0.3s;
+    }
+
+    /* Estilização quando o checkbox está marcado (ON) */
+    #checkboxes input[type="checkbox"]:checked + label::before {
+        background-color: #28a745; /* verde para ON */
+    }
+
+    #checkboxes input[type="checkbox"]:checked + label::after {
+        left: 22px;
+    }
+
+/* Estilo padrão para telas maiores (como desktops) */
+#mainModal .modal-content {
+    font-size: 21px;
+}
+/* Estilo para telas menores (como celulares) */
+@media (max-width: 768px) {
+    #mainModal .modal-content {
+        font-size: 16px; /* ou qualquer outro tamanho que você achar adequado */
+    }
+}
